@@ -1,0 +1,65 @@
+$body-color: red;
+
+.inserted-head-style {
+  color: $body-color;
+}
+
+#main-content {
+  transition: margin-right .5s;
+  padding: 20px;
+  margin-right: 0%;
+
+  &.condensed {
+    margin-right: 80%;
+  }
+}
+
+.sidenav-bg-overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.unhide {
+    opacity: 0.8;
+    width: 100%;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+  &.opened {
+    width: 80%;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+}

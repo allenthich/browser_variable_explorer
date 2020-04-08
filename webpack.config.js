@@ -19,7 +19,7 @@ module.exports = {
         compress: true,
         port: 9001,
         watchContentBase: isDevelopment,
-        hot: isDevelopment
+        // hot: isDevelopment
     },
     module: {
         rules: [
@@ -108,7 +108,10 @@ module.exports = {
             filename: isDevelopment ? '[name].css' : '[name].[hash].css',
             chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
         }),
-        new HtmlWebpackPlugin({template: 'templates/index.html'}),
+        new HtmlWebpackPlugin({
+            template: 'templates/index.html',
+            inject: 'head'
+        }),
         new ManifestPlugin(),
     ]
 };
