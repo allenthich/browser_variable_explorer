@@ -63,3 +63,13 @@ $body-color: red;
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
 }
+
+.accordion {
+  .card-header {
+    padding: 0;
+
+    .btn-link {
+      padding: 0 0.75rem;
+    }
+  }
+}

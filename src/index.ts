@@ -5,7 +5,7 @@ import './styles/app.module'
 import 'bootstrap'
 import './tests/test'
 import { SideNavigation } from './utilities/sidenavigation'
-import { WindowUtility } from './utilities/window'
+import { WindowUtil } from './utilities/window'
 
 const $ = require('jquery')
 const log = console.log
@@ -13,8 +13,8 @@ const log = console.log
 
 $(document).ready(() => {
     log('window', window)
-    let windowUtility = new WindowUtility()
+    let windowUtil = new WindowUtil()
     let sideNavigation = new SideNavigation()
     
-    windowUtility.getGlobals()
+    windowUtil.update()
 })
